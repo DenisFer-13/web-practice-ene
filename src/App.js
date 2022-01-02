@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Home } from "./components/Home/Home";
+import { LandingPage } from "./components/LandingPage/LandingPage"
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>   {/* Aquí indicamos a React que todo lo que esté dentro, deberá renderizarse en base a sus URL respectivas. */}
+      <Routes>        {/* Instrucción igual que el Switch de JS, renderizará solo un componente según la ruta. */}
+        <Route path="/" element={<LandingPage />} />
+        <Route exact path="/home" element={<Home />} />   {/* Y aquí finalmente definimos la ruta y luego el elemento a renderizar. */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 
-export default App;
+export default App;   //Exportamos por defecto, la función App.
