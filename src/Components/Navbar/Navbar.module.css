@@ -1,0 +1,6 @@
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 0 10px 0;
+    background-color: aqua;
+}
