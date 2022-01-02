@@ -1,6 +1,10 @@
 .nav {
     display: flex;
-    justify-content: space-evenly;
-    padding: 10px 0 10px 0;
-    background-color: aqua;
+    justify-content: space-between;
+    padding: 6px 16px 6px 16px;
+    width: 100%;
+}
+div {
+    display: flex;
+    align-items: center;
 }

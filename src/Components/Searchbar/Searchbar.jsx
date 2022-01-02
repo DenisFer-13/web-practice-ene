@@ -6,7 +6,9 @@ export const Searchbar = () => {
   return (
     <nav className={style.nav}>
       <input></input>
-      <AiOutlineSearch />
+      <button>
+        <AiOutlineSearch />
+      </button>
     </nav>
   );
 };
